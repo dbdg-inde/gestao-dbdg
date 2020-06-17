@@ -7,6 +7,9 @@ app.use(express.json())
 require('./db/dbMongoose')
 const usuarioRouter = require('./routers/usuario')
 app.use(usuarioRouter)
+app.all('*', async (req, res)=> {
+    res.status(404).send("Recurso não encontrado.")
+})
 app.listen(port, ()=> {
     console.log(`Executando na porta: ${port}`)
 })

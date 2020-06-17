@@ -30,7 +30,16 @@ router.patch('/usuarios/:id', auth, permissao, async (req, res) => {
         res.status(500).send(error.message)
     }
 })
-router.delete('/usuarios/:id',  async (req, res) => {
+router.delete('/usuarios/me', auth, async (req, res)=>{
+    try {
+        req.usuario.remove()
+        res.send("Perfil excluído")    
+    } catch (error) {
+        console.log(error)
+        res.send(error.message)
+    }
+})
+router.delete('/usuarios/:id', auth, permissao, async (req, res) => {
     try {
         const usuario = await Usuario.findOneAndDelete({_id: req.params.id})
         if(!usuario)    
@@ -40,6 +49,10 @@ router.delete('/usuarios/:id',  async (req, res) => {
         console.log(error)
         res.status(500).send(error.message)
     }
+})
+
+router.get('/usuarios/me', auth , async (req, res) =>{
+    res.send(req.usuario)
 })
 router.get('/usuarios',  async (req, res) => {
     try {
@@ -56,10 +69,11 @@ router.post('/usuarios/login', async (req, res) => {
         if(!usuario)
             return res.status(404).send("Usuário não encotrado")
         const token = await usuario.gerarToken()
-        res.send({usuario: usuario, token: token})    
+        res.status(201).send({usuario: usuario, token: token})    
     } catch (error) {
         console.log(error)
         res.status(403).send(error.message)
     }
 })
+
 module.exports = router
