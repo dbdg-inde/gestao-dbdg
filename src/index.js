@@ -6,7 +6,9 @@ app.use(express.json())
 
 require('./db/dbMongoose')
 const usuarioRouter = require('./routers/usuario')
+const atorRouter = require('./routers/ator')
 app.use(usuarioRouter)
+app.use(atorRouter)
 app.all('*', async (req, res)=> {
     res.status(404).send("Recurso não encontrado.")
 })

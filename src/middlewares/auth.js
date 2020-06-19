@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken')
 const Usuario = require('../models/usuario')
 
 const auth = async (req, res, next) => {
+    
     if(!req.header('Authorization'))
         res.status(401).send("Por favor faça o login")
     const token = req.header('Authorization').replace('Bearer ', '')
