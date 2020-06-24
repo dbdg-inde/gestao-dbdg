@@ -1,3 +1,4 @@
+const Documentacao = require('./../models/documentacao')
 const mongoose = require('mongoose')
 const atorSchema = new mongoose.Schema({
     nome: {type: String, required: true, unique: true},
@@ -13,5 +14,10 @@ const atorSchema = new mongoose.Schema({
     dataSolicitacaoAdesao: {type: Date},
     dataInteresse: {type: Date}
 }, {collection: 'ator'})
+atorSchema.methods.documentacoes = async function() {
+    const ator = this
+     const docs = await Documentacao.find({ator: ator._id})
+    return docs
+} 
 const Ator = mongoose.model('Ator', atorSchema)
 module.exports = Ator

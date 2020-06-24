@@ -38,6 +38,17 @@ router.get('/atores',  async (req, res) => {
         res.status(500).send("Houve algum problema interno no servidor")
     }
 })
+router.get('/atores/:_id/documentacoes',  async (req, res) => {
+    try {
+        console.log(req.params.id)
+     const ator = await Ator.findById(req.params._id)
+     res.send(await ator.documentacoes())
+
+ } catch (error) {
+     console.log(error)
+     res.status(500).send("Houve algum problema interno no servidor")
+ }
+})
 
 router.delete('/atores/:id', auth, permissao, async (req, res) => {
     try {

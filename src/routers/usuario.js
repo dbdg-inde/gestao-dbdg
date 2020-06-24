@@ -62,7 +62,7 @@ router.delete('/usuarios/:id', auth, permissao, async (req, res) => {
 router.get('/usuarios/me', auth , async (req, res) =>{
     res.send(req.usuario)
 })
-router.get('/usuarios',  async (req, res) => {
+router.get('/usuarios', async (req, res) => {
     try {
         const usuarios = await Usuario.find({})
         res.send(usuarios)
@@ -83,5 +83,4 @@ router.post('/usuarios/login', async (req, res) => {
         res.status(403).send(error.message)
     }
 })
-
 module.exports = router

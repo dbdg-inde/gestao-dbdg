@@ -4,6 +4,15 @@ const router = express.Router()
 const auth = require('./../middlewares/auth.js')
 const permissao = require('./../middlewares/permissao.js')
 
+router.get('/documentacoes', async (req, res) => {
+    try {
+        return res.send(await Documentacao.find({}))   
+    } catch (error) {
+        console.log(error)
+        res.status(500).send(error.message)
+    }
+    
+})
 router.post('/documentacoes', async (req, res) => {
     
     const documentacao = new Documentacao(req.body)
