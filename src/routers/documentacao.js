@@ -3,94 +3,54 @@ const Documentacao = require('./../models/documentacao')
 const router = express.Router()
 const auth = require('./../middlewares/auth.js')
 const permissao = require('./../middlewares/permissao.js')
-
-router.get('/documentacoes', async (req, res) => {
+router.get('/documentacoes', async (req,res) => {
     try {
-        return res.send(await Documentacao.find({}))   
+        const documentacoes = await Documentacao.find({})
+        res.send(documentacoes)
     } catch (error) {
         console.log(error)
-        res.status(500).send(error.message)
+        res.status(500).send('Houve algum problema interno no servidor')
     }
     
 })
-router.post('/documentacoes', async (req, res) => {
-    
+
+router.post('/documentacoes', async (req, res) => {    
     const documentacao = new Documentacao(req.body)
     try {
         await documentacao.save()
         return res.status(201).send(documentacao._id)
+        res.send(documentacoes)
     } catch (error) {
         console.log(error)
-        res.status(500).send("Não foi possível criar o usuário")
+        res.status(500).send("Não foi possível criar a documentação")
     }
 })
-/*router.patch('/usuarios/me', auth, async (req, res) => {
-    const novaSenha = req.body.password
+
+router.patch('/documentacoes/:id', auth, permissao, async (req, res) => {
+    const attributeNames = Object.keys(req.body)// ["nome", "isAdministrador"]    
     try {
-        req.usuario.password = novaSenha
-        await req.usuario.save()
+        const documentacao = await Documentacao.findById(req.params.id)        
+        if(!documentacao)    
+            return res.status(404).send("Documentação não encontrado.")
+        attributeNames.forEach(attrName => documentacao[attrName]= req.body[attrName])
+        await documentacao.save()
+        res.send(documentacao)
     } catch (error) {
         console.log(error)
         res.status(500).send(error.message)
     }
 })
-router.patch('/usuarios/:id', auth, permissao, async (req, res) => {
-    const attributeNames = Object.keys(req.body)// ["nome", "isAdministrador"]
+
+router.delete('/documentacoes/:id', auth, permissao, async (req, res) => {
     try {
-        const usuario = await Usuario.findById(req.params.id)
-        if(!usuario)    
-            return res.status(404).send("Usuário não encontrado.")
-        attributeNames.forEach(attrName => usuario[attrName]= req.body[attrName])
-        await usuario.save()
-        res.send(usuario)
+        const documentacao = await Documentacao.findOneAndDelete({_id: req.params.id})
+        if(!documentacao)    
+            return res.status(404).send("Documentação não encontrada.")
+        res.send(documentacao)
     } catch (error) {
         console.log(error)
         res.status(500).send(error.message)
     }
 })
-router.delete('/usuarios/me', auth, async (req, res)=>{
-    try {
-        await req.usuario.remove()
-        res.send("Perfil excluído")    
-    } catch (error) {
-        console.log(error)
-        res.send(error.message)
-    }
-})
-router.delete('/usuarios/:id', auth, permissao, async (req, res) => {
-    try {
-        const usuario = await Usuario.findOneAndDelete({_id: req.params.id})
-        if(!usuario)    
-            return res.status(404).send("Usuário não encontrado.")
-        res.send(usuario)
-    } catch (error) {
-        console.log(error)
-        res.status(500).send(error.message)
-    }
-})
-router.get('/usuarios/me', auth , async (req, res) =>{
-    res.send(req.usuario)
-})
-router.get('/usuarios',  async (req, res) => {
-    try {
-        const usuarios = await Usuario.find({})
-        res.send(usuarios)
-    } catch (error) {
-        console.log(error)
-        res.status(500).send("Houve algum problema interno no servidor")
-    }
-})
-router.post('/usuarios/login', async (req, res) => {
-    try {
-        const usuario = await Usuario.findByCredentials(req.body.email, req.body.password)
-        if(!usuario)
-            return res.status(404).send("Usuário não encotrado")
-        const token = await usuario.gerarToken()
-        res.status(201).send({usuario: usuario, token: token})    
-    } catch (error) {
-        console.log(error)
-        res.status(403).send(error.message)
-    }
-})
-*/
+
 module.exports = router
