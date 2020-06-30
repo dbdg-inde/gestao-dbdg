@@ -9,10 +9,16 @@ const usuarioRouter = require('./routers/usuario')
 const atorRouter = require('./routers/ator')
 const capacitacaoRouter = require('./routers/capacitacao')
 const documentacaoRouter = require('./routers/documentacao')
+const representanteRouter = require('./routers/representante')
+const historicoRouter = require('./routers/historico')
+
 app.use(capacitacaoRouter)
 app.use(usuarioRouter)
 app.use(atorRouter)
 app.use(documentacaoRouter)
+app.use(representanteRouter)
+app.use(historicoRouter)
+
 
 app.all('*', async (req, res)=> {
     res.status(404).send("Recurso não encontrado.")
