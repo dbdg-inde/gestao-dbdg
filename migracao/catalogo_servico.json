@@ -1,0 +1,275 @@
+[
+  {
+    "descricao": "ANA - Agência Nacional de Águas ",
+    "url": "http://wms.snirh.gov.br/arcgis/services/SNIRH/2016/MapServer/WMSServer",
+    "wmsAvailable": true,
+    "wfsAvailable": false,
+    "wcsAvailable": false
+  },
+  {
+    "descricao": "ANATEL - Agência Nacional de Telecomunicações ",
+    "url": "http://sistemas.anatel.gov.br:80/geoserver/ANATEL/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "BNDES - Banco Nacional de Desenvolvimento Econômico e Social ",
+    "url": "https://geoservicos.inde.gov.br/geoserver/BNDES/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "CENSIPAM - Centro Gestor e Operacional do Sistema de Proteção da Amazônia",
+    "url": "http://panorama.sipam.gov.br/geoserver/publico/ows/",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "CMR/Funai - Centro de Monitoramento Remoto ",
+    "url": "http://cmr.funai.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EB/DSG - Diretoria de Serviço Geográfico do  Exército Brasileiro ",
+    "url": "http://www.geoportal.eb.mil.br/mapcache3857",
+    "wmsAvailable": true,
+    "wfsAvailable": false,
+    "wcsAvailable": false
+  },
+  {
+    "descricao": "EMBRAPA Algodão - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cnpa.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Amazônia Oriental - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cpatu.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Caprinos - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://atlas.geoinfo.cnpm.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Clima Temperado - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cpact.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Floresta - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cnpf.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA  Informática Agropecuária - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cnptia.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Meio Ambiente - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cnpma.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Pecuária Sudeste  - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cppse.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Rondônia  - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://atlas.geoinfo.cnpm.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Solos - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cnps.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Tabuleiros Costeiros  - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cpatc.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "EMBRAPA Territorial  - Empresa Brasileira de Pesquisa Agropecuária ",
+    "url": "http://geoinfo.cnpm.embrapa.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "IBAMA - Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis ",
+    "url": "http://siscom.ibama.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "IBGE - Instituto Brasileiro de Geografia e Estatística ",
+    "url": "https://geoservicos.ibge.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "ICA - Instituto de Cartografia Aeronáutica ",
+    "url": "http://geoaisweb.decea.gov.br/geoserver/ICA/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "INPE - Instituto Nacional de Pesquisas Espaciais ",
+    "url": "http://terrabrasilis.dpi.inpe.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": false,
+    "wcsAvailable": false
+  },
+  {
+    "descricao": "IPHAN - Instituto do Patrimônio Histórico e Artístico Nacional ",
+    "url": "http://portal.iphan.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "MDIC - Ministério do Desenvolvimento da Indústria e do Comércio ",
+    "url": "https://geoservicos.inde.gov.br/geoserver/MDIC/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "MP - Ministério de Planejamento, Desenvolvimento e Gestão ",
+    "url": "https://geoservicos.inde.gov.br/geoserver/MPOG/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "IBGE/ODS - Objetivos de Desenvolvimento Sustentável ",
+    "url": "https://geoservicos.ibge.gov.br/geoserver/ODS/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "SFB - Serviço Florestal do Brasil ",
+    "url": "http://sistemas.florestal.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "SNPM - Secretaria Nacional de Políticas para as Mulheres ",
+    "url": "https://geoservicos.inde.gov.br/geoserver/SPM/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "CELEPAR/PR - Companhia de Tecnologia da Informação e Comunicação ",
+    "url": "http://geoserver.pr.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "IDEA/SP - Infraestrutura de Dados Espaciais Ambientais do Estado de São Paulo ",
+    "url": "http://datageo.ambiente.sp.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "IDE/SP - Infraestrutura de Dados Espaciais de São Paulo ",
+    "url": "https://ide.emplasa.sp.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "GEOBASES - Sistema Integrado de Bases Geoespaciais do Estado do Espírito Santo ",
+    "url": "http://geoserver.geobases.es.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "IDE/Sisema- Sistema Estadual de Meio Ambiente e Recursos Hídricos(MG)",
+    "url": "https://geoserver.meioambiente.mg.gov.br/ows/",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "INEA/RJ - Instituto Estadual do Ambiente ",
+    "url": "https://geoservicos.inde.gov.br/geoserver/INEA/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "PRODEMG - Companhia de Tecnologia da Informação do Estado de Minas Gerais",
+    "url": "http://geoserver.prodemge.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "SEPLAG/AL - Secretaria de Estado do Planejamento, Gestão  e Patrimônio de Alagoas ",
+    "url": "http://geo.seplande.al.gov.br/teogc/terraogcwms.cgi",
+    "wmsAvailable": true,
+    "wfsAvailable": false,
+    "wcsAvailable": false
+  },
+  {
+    "descricao": "SEFIN - Secretaria Municipal das Finanças de Fortaleza",
+    "url": "https://geoserver.sefin.fortaleza.ce.gov.br/geoserver/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "Prefeitura de Belo Horizonte (MG)",
+    "url": "http://bhmapogcbase.pbh.gov.br/bhmapogcbase/ide_bhgeo/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  },
+  {
+    "descricao": "UFABC/SP - Universidade Federal do ABC ",
+    "url": "https://geoservicos.inde.gov.br/geoserver/UFABC/ows",
+    "wmsAvailable": true,
+    "wfsAvailable": true,
+    "wcsAvailable": true
+  }
+]
