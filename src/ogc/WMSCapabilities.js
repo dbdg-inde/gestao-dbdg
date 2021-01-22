@@ -28,15 +28,30 @@ class WMSCapabilities {
     async convertToXmlObject(xmlString) {
         const parser = new xml2js.Parser(/* options */);
         this.xmlObject = await parser.parseStringPromise(xmlString)
-        if (!this.xmlObject['WMS_Capabilities'])
+        if (!this.xmlObject['WMS_Capabilities']) {
+            if (this.xmlObject['ServiceExceptionReport']){
+                console.log(this.xmlObject['ServiceExceptionReport'])
+                console.log('Url ou caminho: ', this.url)
+                this.xmlObject = null
+                throw Error("Houve uma exceção. O xml lido não tem o formato do WMS getCapabilities!")
+            }
             throw Error("O xml lido não tem o formato do WMS getCapabilities!")
+            return null
+        }
         return this.xmlObject
     }
     async initializeXmlObject() {
         try {
+            
             this.res = await fetch(this.url)
+            const status = await this.res.status
             const headers = await this.res.headers.raw()
+            if (this.res.status===404){
+                this.xmlObject = null
+                throw new Error(`URL não encontrado: ${this.url}.Status code:${this.res.status}`)
+            }
             if (!this.res.status === 200) {
+                this.xmlObject = null
                 throw new Error(`Houve algum problema na requisição ${this.url}.Status code:${this.res.status}`)
             }
             const contentType = await headers['content-type']
@@ -46,7 +61,8 @@ class WMSCapabilities {
             return await this.convertToXmlObject(this.xmlString)
         } catch (error) {
             console.log(error)
-            return this.xmlObject = null
+            console.log(`Status code: ${this.res}`)
+            throw new Error(`Houve algum erro na requisição: ${this.url}. Detalhes do erro: ${error.message}`)
         }
     }
     async initializeXmlObjectFromFile(fileNameWithPath) {
@@ -55,6 +71,9 @@ class WMSCapabilities {
              return await this.convertToXmlObject(this.xmlString)    
         } catch (error) {
             console.log(error)
+            throw new Error(`Houve algum erro na requisição: ${this.url}. Detalhes do erro: ${error.message}`)
+            return null
+            
         }
     }
     async  xmlText() {
@@ -66,12 +85,25 @@ class WMSCapabilities {
         return urlOrFileNameWithPath.search(/(http:|https:)/) > -1
     }
     async getXmlObject() {
-         if (this.xmlObject)
+        if (this.xmlObject)
             return this.xmlObject
          if (this.isURL(this.url))    
             return await this.initializeXmlObject()  
          else
             return await this.initializeXmlObjectFromFile(this.url)     
+    }
+    async wmsCapabilities() {
+        const xmlObj = await this.getXmlObject()
+        if(!xmlObj)
+            return null
+        return await xmlObj['WMS_Capabilities']
+    }
+    async version() {
+        const wmsCapabilitiesObj = await this.wmsCapabilities()
+        if(!wmsCapabilitiesObj)
+            return null
+        let obj = await wmsCapabilitiesObj['$']
+        return await obj['version']
     }
     //Service is a element providing general metadata for the server as a whole.
     async service() {
@@ -249,6 +281,8 @@ class WMSCapabilities {
     }
     async lenLayerObjects() {
         const ls = await this.layerObjects()
+        if (!ls)
+            return 0
         return await  Object.keys(ls).length
     }
     async layerObjectsBy(field_name, field_value) {
@@ -296,6 +330,5 @@ class WMSCapabilities {
         })
         return crsObjects
     }
-    
 }
 module.exports=WMSCapabilities

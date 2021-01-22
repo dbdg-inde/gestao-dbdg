@@ -1,0 +1,1580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0" updateSequence="24462" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://geoservicos.inde.gov.br/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>GeoServer Web Map Service</Title>
+    <Abstract>A compliant implementation of WMS 1.1.1 plus most of the SLD 1.0 extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="https://www.inde.gov.br/"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson/>
+        <ContactOrganization>INDE - Infraestrutura Nacional de Dados Espaciais</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition/>
+      <ContactAddress>
+        <AddressType>IBGE - INDE/DBDG</AddressType>
+        <Address>Av. República do Chile, 500</Address>
+        <City>Rio de Janeiro</City>
+        <StateOrProvince>RJ</StateOrProvince>
+        <PostCode/>
+        <Country>Brazil</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress>dbdg@inde.gov.br</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>text/html; subtype=openlayers2</Format>
+        <Format>text/html; subtype=openlayers3</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+      <Format>JSON</Format>
+    </Exception>
+    <Layer>
+      <Title>GeoServer Web Map Service</Title>
+      <Abstract>A compliant implementation of WMS 1.1.1 plus most of the SLD 1.0 extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:4674</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-74.55058090260056</westBoundLongitude>
+        <eastBoundLongitude>-27.935427758393857</eastBoundLongitude>
+        <southBoundLatitude>-37.74672769465751</southBoundLatitude>
+        <northBoundLatitude>8.868425449549202</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-74.55058090260056" miny="-37.74672769465751" maxx="-27.935427758393857" maxy="8.868425449549202"/>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2009</Name>
+        <Title>AP_2009</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>AP_2009</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.6259101584566</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>3.6058070000649</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.6259101584566" miny="-33.7520136933788" maxx="-34.7937031650182" maxy="3.6058070000649"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-70.6259101584566" maxx="3.6058070000649" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:AP_2009</Name>
+          <Title>BNDES:AP_2009</Title>
+          <LegendURL width="187" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2009"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2010</Name>
+        <Title>AP_2010</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>AP_2010</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.6259101584566</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>3.74214767848431</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.6259101584566" miny="-33.7520136933788" maxx="-34.7937031650182" maxy="3.74214767848431"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-70.6259101584566" maxx="3.74214767848431" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:AP_2010</Name>
+          <Title>BNDES:AP_2010</Title>
+          <LegendURL width="187" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2010"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2011</Name>
+        <Title>AP_2011</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>AP_2011</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.6256218575849</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.32536465521008</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.6256218575849" miny="-33.7520136933788" maxx="-34.7937031650182" maxy="4.32536465521008"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-70.6256218575849" maxx="4.32536465521008" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:AP_2011</Name>
+          <Title>AtlasStyler v1.9-r201208311947, Export-Mode: PRODUCTION</Title>
+          <LegendURL width="187" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2011"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2012</Name>
+        <Title>AP_2012</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>AP_2012</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.7783846689228</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.32536465521008</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.7783846689228" miny="-33.7520136933788" maxx="-34.7937031650182" maxy="4.32536465521008"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-69.7783846689228" maxx="4.32536465521008" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:AP_2012</Name>
+          <Title>AtlasStyler v1.9-r201208311947, Export-Mode: PRODUCTION</Title>
+          <LegendURL width="187" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2012"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2013</Name>
+        <Title>AP_2013</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>AP_2013</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.2250366210938</westBoundLongitude>
+          <eastBoundLongitude>-34.793701171875</eastBoundLongitude>
+          <southBoundLatitude>-33.75201415928419</southBoundLatitude>
+          <northBoundLatitude>4.325365066386213</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.2250366210938" miny="-33.75201415928419" maxx="-34.793701171875" maxy="4.325365066386213"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7520141601562" miny="-66.2250366210938" maxx="4.32536506652832" maxy="-34.793701171875"/>
+        <Style>
+          <Name>BNDES:AP_2013</Name>
+          <Title>BNDES:AP_2013</Title>
+          <LegendURL width="209" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2013"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2014</Name>
+        <Title>AP_2014</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>AP_2014</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.91059423394931</westBoundLongitude>
+          <eastBoundLongitude>-31.071667423765497</eastBoundLongitude>
+          <southBoundLatitude>-34.13278795154089</southBoundLatitude>
+          <northBoundLatitude>4.706138858642917</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.91059423394931" miny="-34.13278795154089" maxx="-31.071667423765497" maxy="4.706138858642917"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7520141601562" miny="-66.1885604858398" maxx="4.32536506652832" maxy="-34.793701171875"/>
+        <Style>
+          <Name>BNDES:AP_2014</Name>
+          <Title>BNDES:AP_2014</Title>
+          <LegendURL width="209" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2015</Name>
+        <Title>AP_2015</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>AP_2015</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-72.69600549344543</westBoundLongitude>
+          <eastBoundLongitude>-28.91553816949918</eastBoundLongitude>
+          <southBoundLatitude>-36.60073509722276</southBoundLatitude>
+          <northBoundLatitude>7.179732226723479</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-72.69600549344543" miny="-36.60073509722276" maxx="-28.91553816949918" maxy="7.179732226723479"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-72.2667852255636" maxx="4.32946135260956" maxy="-29.344758437381"/>
+        <Style>
+          <Name>BNDES:AP_2015</Name>
+          <Title>BNDES:AP_2015</Title>
+          <LegendURL width="193" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2015"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2016</Name>
+        <Title>AP_2016</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>AP_2016</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-72.69600549344543</westBoundLongitude>
+          <eastBoundLongitude>-28.91553816949918</eastBoundLongitude>
+          <southBoundLatitude>-36.60073509722276</southBoundLatitude>
+          <northBoundLatitude>7.179732226723479</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-72.69600549344543" miny="-36.60073509722276" maxx="-28.91553816949918" maxy="7.179732226723479"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-72.2667852255636" maxx="4.32946135260956" maxy="-29.344758437381"/>
+        <Style>
+          <Name>BNDES:AP_2016</Name>
+          <Title>BNDES:AP_2016</Title>
+          <LegendURL width="178" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2016"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>BNDES:AP_2016</Name>
+          <Title>BNDES:AP_2016</Title>
+          <LegendURL width="178" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2016&amp;style=AP_2016"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2017</Name>
+        <Title>Agricultura e Pesca 2017</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>AP_2017</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.6236529312768</westBoundLongitude>
+          <eastBoundLongitude>-29.344758437381003</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>4.32946135246732</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.6236529312768" miny="-33.750464222966606" maxx="-29.344758437381003" maxy="4.32946135246732"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-70.6236529312768" maxx="4.32946135260956" maxy="-29.344758437381"/>
+        <Style>
+          <Name>BNDES:AP_2017</Name>
+          <Title>BNDES:AP_2017</Title>
+          <LegendURL width="177" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2017"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>AP_2018</Name>
+        <Title>Agricultura e Pesca 2018</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>agropecuaria_e_pesca2018</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.7975082397461</westBoundLongitude>
+          <eastBoundLongitude>-31.9163475036621</eastBoundLongitude>
+          <southBoundLatitude>-33.7504653930664</southBoundLatitude>
+          <northBoundLatitude>3.54034638404846</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.7975082397461" miny="-33.7504653930664" maxx="-31.9163475036621" maxy="3.54034638404846"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504653930664" miny="-65.7975082397461" maxx="3.54034638404846" maxy="-31.9163475036621"/>
+        <Style>
+          <Name>BNDES:AP_2018</Name>
+          <Title>BNDES:AP_2018</Title>
+          <LegendURL width="201" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=AP_2018"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CNAES_por_Municipio_2009</Name>
+        <Title>CNAES_por_Municipio_2009</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>CNAES_por_Municipio_2009</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-32.3924574827765</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.43665587655256</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-32.3924574827765" maxy="4.43665587655256"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.43665587655256" maxy="-32.3924574827765"/>
+        <Style>
+          <Name>BNDES:CNAES_por_Municipio_2009</Name>
+          <Title>BNDES:CNAES_por_Municipio_2009</Title>
+          <LegendURL width="201" height="140">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CNAES_por_Municipio_2009"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CNAES_por_Municipio_2010</Name>
+        <Title>CNAES_por_Municipio_2010</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>CNAES_por_Municipio_2010</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-32.3924574827765</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.88458432699979</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-32.3924574827765" maxy="4.88458432699979"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.88458432699979" maxy="-32.3924574827765"/>
+        <Style>
+          <Name>BNDES:CNAES_por_Municipio_2010</Name>
+          <Title>BNDES:CNAES_por_Municipio_2010</Title>
+          <LegendURL width="208" height="140">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CNAES_por_Municipio_2010"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CNAES_por_Municipio_2011</Name>
+        <Title>CNAES_por_Municipio_2011</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>CNAES_por_Municipio_2011</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-32.3924574827765</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.88458432699979</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-32.3924574827765" maxy="4.88458432699979"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.88458432699979" maxy="-32.3924574827765"/>
+        <Style>
+          <Name>BNDES:CNAES_por_Municipio_2011</Name>
+          <Title>BNDES:CNAES_por_Municipio_2011</Title>
+          <LegendURL width="208" height="140">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CNAES_por_Municipio_2011"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CNAES_por_Municipio_2012</Name>
+        <Title>CNAES_por_Municipio_2012</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>CNAES_por_Municipio_2012</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-32.3924574827765</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.88458432699979</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-32.3924574827765" maxy="4.88458432699979"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.88458432699979" maxy="-32.3924574827765"/>
+        <Style>
+          <Name>BNDES:CNAES_por_Municipio_2012</Name>
+          <Title>BNDES:CNAES_por_Municipio_2012</Title>
+          <LegendURL width="208" height="140">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CNAES_por_Municipio_2012"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2009</Name>
+        <Title>CS_2009</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>CS_2009</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-32.3924574827765</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.43665587655256</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-32.3924574827765" maxy="4.43665587655256"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.43665587655256" maxy="-32.3924574827765"/>
+        <Style>
+          <Name>BNDES:CS_2009</Name>
+          <Title>BNDES:CS_2009</Title>
+          <LegendURL width="194" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2009"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2010</Name>
+        <Title>CS_2010</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>CS_2010</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-32.3924574827765</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.88458432699979</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-32.3924574827765" maxy="4.88458432699979"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.88458432699979" maxy="-32.3924574827765"/>
+        <Style>
+          <Name>BNDES:CS_2010</Name>
+          <Title>BNDES:CS_2010</Title>
+          <LegendURL width="201" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2010"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2011</Name>
+        <Title>CS_2011</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>CS_2011</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-32.3924574827765</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.88458432699979</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-32.3924574827765" maxy="4.88458432699979"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.88458432699979" maxy="-32.3924574827765"/>
+        <Style>
+          <Name>BNDES:CS_2011</Name>
+          <Title>BNDES:CS_2011</Title>
+          <LegendURL width="194" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2011"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2012</Name>
+        <Title>CS_2012</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>CS_2012</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-32.3924574827765</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.88458432699979</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-32.3924574827765" maxy="4.88458432699979"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.88458432699979" maxy="-32.3924574827765"/>
+        <Style>
+          <Name>BNDES:CS_2012</Name>
+          <Title>BNDES:CS_2012</Title>
+          <LegendURL width="201" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2012"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2013</Name>
+        <Title>CS_2013</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>CS_2013</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.5288314819336</westBoundLongitude>
+          <eastBoundLongitude>-32.3924560546875</eastBoundLongitude>
+          <southBoundLatitude>-33.75201415928419</southBoundLatitude>
+          <northBoundLatitude>4.884584426719569</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.5288314819336" miny="-33.75201415928419" maxx="-32.3924560546875" maxy="4.884584426719569"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7520141601562" miny="-67.5288314819336" maxx="4.88458442687988" maxy="-32.3924560546875"/>
+        <Style>
+          <Name>BNDES:CS_2013</Name>
+          <Title>BNDES:CS_2013</Title>
+          <LegendURL width="223" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2013"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2014</Name>
+        <Title>CS_2014</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>CS_2014</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.44948711306155</westBoundLongitude>
+          <eastBoundLongitude>-29.44801960080566</eastBoundLongitude>
+          <southBoundLatitude>-34.93444862241025</southBoundLatitude>
+          <northBoundLatitude>6.067018889845635</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.44948711306155" miny="-34.93444862241025" maxx="-29.44801960080566" maxy="6.067018889845635"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7520141601562" miny="-67.5050506591797" maxx="4.88458442687988" maxy="-32.3924560546875"/>
+        <Style>
+          <Name>BNDES:CS_2014</Name>
+          <Title>BNDES:CS_2014</Title>
+          <LegendURL width="223" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2015</Name>
+        <Title>CS_2015</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>CS_2015</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9990397779885</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>4.872161977858303</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9990397779885" miny="-33.750464222966606" maxx="-28.84048936307761" maxy="4.872161977858303"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.9990397779885" maxx="4.87216197801821" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:CS_2015</Name>
+          <Title>BNDES:CS_2015</Title>
+          <LegendURL width="203" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2015"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2016</Name>
+        <Title>CS_2016</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>CS_2016</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.6507797241211</westBoundLongitude>
+          <eastBoundLongitude>-28.840488433837905</eastBoundLongitude>
+          <southBoundLatitude>-33.75046539219441</southBoundLatitude>
+          <northBoundLatitude>4.872162341911623</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.6507797241211" miny="-33.75046539219441" maxx="-28.840488433837905" maxy="4.872162341911623"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504653930664" miny="-67.6507797241211" maxx="4.87216234207153" maxy="-28.8404884338379"/>
+        <Style>
+          <Name>BNDES:CS_2016</Name>
+          <Title>BNDES:CS_2016</Title>
+          <LegendURL width="168" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2016"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>BNDES:CS_2016</Name>
+          <Title>BNDES:CS_2016</Title>
+          <LegendURL width="168" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2016&amp;style=CS_2016"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2017</Name>
+        <Title>CS_2017</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>CS_2017</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-74.55058090260056</westBoundLongitude>
+          <eastBoundLongitude>-27.935427758393857</eastBoundLongitude>
+          <southBoundLatitude>-37.74672769465751</southBoundLatitude>
+          <northBoundLatitude>8.868425449549202</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-74.55058090260056" miny="-37.74672769465751" maxx="-27.935427758393857" maxy="8.868425449549202"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.6455192979168" maxx="4.87216197801821" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:CS_2017</Name>
+          <Title>BNDES:CS_2017</Title>
+          <LegendURL width="184" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2017"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>CS_2018</Name>
+        <Title>Comércio e Serviço 2018</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>comercio_e_servico2018</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.6070938110352</westBoundLongitude>
+          <eastBoundLongitude>-28.8404884338379</eastBoundLongitude>
+          <southBoundLatitude>-33.7504653930664</southBoundLatitude>
+          <northBoundLatitude>4.87216234207153</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.6070938110352" miny="-33.7504653930664" maxx="-28.8404884338379" maxy="4.87216234207153"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504653930664" miny="-67.6070938110352" maxx="4.87216234207153" maxy="-28.8404884338379"/>
+        <Style>
+          <Name>BNDES:CS_2018</Name>
+          <Title>BNDES:CS_2018</Title>
+          <LegendURL width="194" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2018"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>BNDES:CS_2018</Name>
+          <Title>BNDES:CS_2018</Title>
+          <LegendURL width="194" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=CS_2018&amp;style=CS_2018"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2009</Name>
+        <Title>IE_2009</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>IE_2009</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6320298587681</westBoundLongitude>
+          <eastBoundLongitude>-34.8596314626194</eastBoundLongitude>
+          <southBoundLatitude>-31.8005870747262</southBoundLatitude>
+          <northBoundLatitude>3.6058070000649</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6320298587681" miny="-31.8005870747262" maxx="-34.8596314626194" maxy="3.6058070000649"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.8005870747262" miny="-73.6320298587681" maxx="3.6058070000649" maxy="-34.8596314626194"/>
+        <Style>
+          <Name>BNDES:IE_2009</Name>
+          <Title>BNDES:IE_2009</Title>
+          <LegendURL width="187" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2009"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2010</Name>
+        <Title>IE_2010</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IE_2010</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.7783846689228</westBoundLongitude>
+          <eastBoundLongitude>-34.828756565886</eastBoundLongitude>
+          <southBoundLatitude>-32.6440729745871</southBoundLatitude>
+          <northBoundLatitude>3.6058070000649</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.7783846689228" miny="-32.6440729745871" maxx="-34.828756565886" maxy="3.6058070000649"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.6440729745871" miny="-69.7783846689228" maxx="3.6058070000649" maxy="-34.828756565886"/>
+        <Style>
+          <Name>BNDES:IE_2010</Name>
+          <Title>BNDES:IE_2010</Title>
+          <LegendURL width="187" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2010"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2011</Name>
+        <Title>IE_2011</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IE_2011</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6320298587681</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-31.8005870747262</southBoundLatitude>
+          <northBoundLatitude>3.6058070000649</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6320298587681" miny="-31.8005870747262" maxx="-34.7937031650182" maxy="3.6058070000649"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.8005870747262" miny="-73.6320298587681" maxx="3.6058070000649" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:IE_2011</Name>
+          <Title>BNDES:IE_2011</Title>
+          <LegendURL width="187" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2011"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2012</Name>
+        <Title>IE_2012</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IE_2012</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-32.0166513994693</southBoundLatitude>
+          <northBoundLatitude>3.6058070000649</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-32.0166513994693" maxx="-34.7937031650182" maxy="3.6058070000649"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.0166513994693" miny="-73.9913915619595" maxx="3.6058070000649" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:IE_2012</Name>
+          <Title>BNDES:IE_2012</Title>
+          <LegendURL width="187" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2012"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2013</Name>
+        <Title>IE_2013</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IE_2013</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.6591415405273</westBoundLongitude>
+          <eastBoundLongitude>-34.8023414611816</eastBoundLongitude>
+          <southBoundLatitude>-32.64407348547065</southBoundLatitude>
+          <northBoundLatitude>3.6058070658451458</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.6591415405273" miny="-32.64407348547065" maxx="-34.8023414611816" maxy="3.6058070658451458"/>
+        <BoundingBox CRS="EPSG:4674" minx="-32.6440734863281" miny="-65.6591415405273" maxx="3.60580706596375" maxy="-34.8023414611816"/>
+        <Style>
+          <Name>BNDES:IE_2013</Name>
+          <Title>BNDES:IE_2013</Title>
+          <LegendURL width="223" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2013"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2014</Name>
+        <Title>IE_2014</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IE_2014</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.6964340209961</westBoundLongitude>
+          <eastBoundLongitude>-34.793701171875</eastBoundLongitude>
+          <southBoundLatitude>-32.64407348547065</southBoundLatitude>
+          <northBoundLatitude>3.6058070658451458</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.6964340209961" miny="-32.64407348547065" maxx="-34.793701171875" maxy="3.6058070658451458"/>
+        <BoundingBox CRS="EPSG:4674" minx="-32.6440734863281" miny="-65.6964340209961" maxx="3.60580706596375" maxy="-34.793701171875"/>
+        <Style>
+          <Name>BNDES:IE_2014</Name>
+          <Title>BNDES:IE_2014</Title>
+          <LegendURL width="216" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2015</Name>
+        <Title>IE_2015</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IE_2015</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6455192979168</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-32.64412933776265</southBoundLatitude>
+          <northBoundLatitude>2.525690761085831</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6455192979168" miny="-32.64412933776265" maxx="-28.84048936307761" maxy="2.525690761085831"/>
+        <BoundingBox CRS="EPSG:4674" minx="-32.6441293386201" miny="-73.6455192979168" maxx="2.52569076116902" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:IE_2015</Name>
+          <Title>BNDES:IE_2015</Title>
+          <LegendURL width="183" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2015"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2016</Name>
+        <Title>IE_2016</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IE_2016</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.05299221772322</westBoundLongitude>
+          <eastBoundLongitude>-35.5549884723575</eastBoundLongitude>
+          <southBoundLatitude>-32.64412933776265</southBoundLatitude>
+          <northBoundLatitude>2.2501361242287867</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.05299221772322" miny="-32.64412933776265" maxx="-35.5549884723575" maxy="2.2501361242287867"/>
+        <BoundingBox CRS="EPSG:4674" minx="-32.6441293386201" miny="-70.0529922177232" maxx="2.25013612430292" maxy="-35.5549884723575"/>
+        <Style>
+          <Name>BNDES:IE_2016</Name>
+          <Title>BNDES:IE_2016</Title>
+          <LegendURL width="135" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2016"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2017</Name>
+        <Title>IE_2017</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IE_2017</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-64.3406878020679</westBoundLongitude>
+          <eastBoundLongitude>-35.5549884723575</eastBoundLongitude>
+          <southBoundLatitude>-31.85948816907944</southBoundLatitude>
+          <northBoundLatitude>3.6059879998880087</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-64.3406878020679" miny="-31.85948816907944" maxx="-35.5549884723575" maxy="3.6059879998880087"/>
+        <BoundingBox CRS="EPSG:4674" minx="-31.8594881699258" miny="-64.3406878020679" maxx="3.60598800000662" maxy="-35.5549884723575"/>
+        <Style>
+          <Name>BNDES:IE_2017</Name>
+          <Title>BNDES:IE_2017</Title>
+          <LegendURL width="129" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2017"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IE_2018</Name>
+        <Title>Indústria Extrativista 2018</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>industria_extrativista2018</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.3128929138184</westBoundLongitude>
+          <eastBoundLongitude>-29.6093502044678</eastBoundLongitude>
+          <southBoundLatitude>-32.6441307067871</southBoundLatitude>
+          <northBoundLatitude>3.70189261436462</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.3128929138184" miny="-32.6441307067871" maxx="-29.6093502044678" maxy="3.70189261436462"/>
+        <BoundingBox CRS="EPSG:4674" minx="-32.6441307067871" miny="-60.3128929138184" maxx="3.70189261436462" maxy="-29.6093502044678"/>
+        <Style>
+          <Name>BNDES:IE_2018</Name>
+          <Title>BNDES:IE_2018</Title>
+          <LegendURL width="177" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2018"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>BNDES:IE_2018</Name>
+          <Title>BNDES:IE_2018</Title>
+          <LegendURL width="177" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IE_2018&amp;style=IE_2018"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2009</Name>
+        <Title>IT_2009</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IT_2009</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6320298587681</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>3.6058070000649</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6320298587681" miny="-33.7520136933788" maxx="-34.7937031650182" maxy="3.6058070000649"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.6320298587681" maxx="3.6058070000649" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:IT_2009</Name>
+          <Title>BNDES:IT_2009</Title>
+          <LegendURL width="201" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2009"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2010</Name>
+        <Title>IT_2010</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>IT_2010</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6320298587681</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>3.6058070000649</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6320298587681" miny="-33.7520136933788" maxx="-34.7937031650182" maxy="3.6058070000649"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.6320298587681" maxx="3.6058070000649" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:IT_2010</Name>
+          <Title>BNDES:IT_2010</Title>
+          <LegendURL width="201" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2010"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2011</Name>
+        <Title>IT_2011</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>IT_2011</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9913915619595</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.43665587655256</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9913915619595" miny="-33.7520136933788" maxx="-34.7937031650182" maxy="4.43665587655256"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.9913915619595" maxx="4.43665587655256" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:IT_2011</Name>
+          <Title>BNDES:IT_2011</Title>
+          <LegendURL width="194" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2011"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2012</Name>
+        <Title>IT_2012</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IT_2012</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6320298587681</westBoundLongitude>
+          <eastBoundLongitude>-34.7937031650182</eastBoundLongitude>
+          <southBoundLatitude>-33.7520136933788</southBoundLatitude>
+          <northBoundLatitude>4.43665587655256</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6320298587681" miny="-33.7520136933788" maxx="-34.7937031650182" maxy="4.43665587655256"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.7520136933788" miny="-73.6320298587681" maxx="4.43665587655256" maxy="-34.7937031650182"/>
+        <Style>
+          <Name>BNDES:IT_2012</Name>
+          <Title>BNDES:IT_2012</Title>
+          <LegendURL width="194" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2012"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>1.0E20</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2013</Name>
+        <Title>IT_2013</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>IT_2013</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.07700347900389</westBoundLongitude>
+          <eastBoundLongitude>-34.793701171875</eastBoundLongitude>
+          <southBoundLatitude>-33.75201415928419</southBoundLatitude>
+          <northBoundLatitude>4.436655998084245</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.07700347900389" miny="-33.75201415928419" maxx="-34.793701171875" maxy="4.436655998084245"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7520141601562" miny="-67.0770034790039" maxx="4.43665599822998" maxy="-34.793701171875"/>
+        <Style>
+          <Name>BNDES:IT_2013</Name>
+          <Title>BNDES:IT_2013</Title>
+          <LegendURL width="216" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2013"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2014</Name>
+        <Title>IT_2014</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>IT_2014</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.8427352905273</westBoundLongitude>
+          <eastBoundLongitude>-34.793701171875</eastBoundLongitude>
+          <southBoundLatitude>-33.75201415928419</southBoundLatitude>
+          <northBoundLatitude>4.436655998084245</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.8427352905273" miny="-33.75201415928419" maxx="-34.793701171875" maxy="4.436655998084245"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7520141601562" miny="-66.8427352905273" maxx="4.43665599822998" maxy="-34.793701171875"/>
+        <Style>
+          <Name>BNDES:IT_2014</Name>
+          <Title>BNDES:IT_2014</Title>
+          <LegendURL width="218" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2015</Name>
+        <Title>IT_2015</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>IT_2015</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6455192979168</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>4.436557792685499</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6455192979168" miny="-33.750464222966606" maxx="-28.84048936307761" maxy="4.436557792685499"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.6455192979168" maxx="4.43655779283123" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:IT_2015</Name>
+          <Title>BNDES:IT_2015</Title>
+          <LegendURL width="203" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2015"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2016</Name>
+        <Title>IT_2016</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>IT_2016</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6455192979168</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>4.436557792685499</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6455192979168" miny="-33.750464222966606" maxx="-28.84048936307761" maxy="4.436557792685499"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.6455192979168" maxx="4.43655779283123" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:IT_2016</Name>
+          <Title>BNDES:IT_2016</Title>
+          <LegendURL width="178" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2016"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2017</Name>
+        <Title>IT_2017</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>IT_2017</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6455192979168</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>3.6059879998880087</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6455192979168" miny="-33.750464222966606" maxx="-28.84048936307761" maxy="3.6059879998880087"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.6455192979168" maxx="3.60598800000662" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:IT_2017</Name>
+          <Title>BNDES:IT_2017</Title>
+          <LegendURL width="184" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2017"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IT_2018</Name>
+        <Title>Industria de Transformação 2018</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>industria_de_transformacao2018</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.1227111816406</westBoundLongitude>
+          <eastBoundLongitude>-29.9771137237549</eastBoundLongitude>
+          <southBoundLatitude>-32.6441307067871</southBoundLatitude>
+          <northBoundLatitude>2.93227410316467</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.1227111816406" miny="-32.6441307067871" maxx="-29.9771137237549" maxy="2.93227410316467"/>
+        <BoundingBox CRS="EPSG:4674" minx="-32.6441307067871" miny="-66.1227111816406" maxx="2.93227410316467" maxy="-29.9771137237549"/>
+        <Style>
+          <Name>BNDES:IT_2018</Name>
+          <Title>BNDES:IT_2018</Title>
+          <LegendURL width="204" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IT_2018"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>TOTAL_2013</Name>
+        <Title>CNAES_Por_Municipio_2013</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>TOTAL_2013</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.4343185424805</westBoundLongitude>
+          <eastBoundLongitude>-32.3924560546875</eastBoundLongitude>
+          <southBoundLatitude>-33.75201415928419</southBoundLatitude>
+          <northBoundLatitude>4.884584426719569</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.4343185424805" miny="-33.75201415928419" maxx="-32.3924560546875" maxy="4.884584426719569"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7520141601562" miny="-67.4343185424805" maxx="4.88458442687988" maxy="-32.3924560546875"/>
+        <Style>
+          <Name>BNDES:TOTAL_2013</Name>
+          <Title>BNDES:TOTAL_2013</Title>
+          <LegendURL width="230" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=TOTAL_2013"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>TOTAL_2014</Name>
+        <Title>CNAES_Por_Municipio_2014</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>TOTAL_2014</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.455322265625</westBoundLongitude>
+          <eastBoundLongitude>-32.3924560546875</eastBoundLongitude>
+          <southBoundLatitude>-33.75201415928419</southBoundLatitude>
+          <northBoundLatitude>4.884584426719569</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.455322265625" miny="-33.75201415928419" maxx="-32.3924560546875" maxy="4.884584426719569"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7520141601562" miny="-67.455322265625" maxx="4.88458442687988" maxy="-32.3924560546875"/>
+        <Style>
+          <Name>BNDES:TOTAL_2014</Name>
+          <Title>BNDES:TOTAL_2014</Title>
+          <LegendURL width="217" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=TOTAL_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>TOTAL_2015</Name>
+        <Title>CNAES_Por_Municipio_2015</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>TOTAL_2015</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9990397779885</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>4.872161977858303</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9990397779885" miny="-33.750464222966606" maxx="-28.84048936307761" maxy="4.872161977858303"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.9990397779885" maxx="4.87216197801821" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:TOTAL_2015</Name>
+          <Title>BNDES:TOTAL_2015</Title>
+          <LegendURL width="203" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=TOTAL_2015"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>BNDES:TOTAL_2015</Name>
+          <Title>BNDES:TOTAL_2015</Title>
+          <LegendURL width="203" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=TOTAL_2015&amp;style=TOTAL_2015"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>Total_2016</Name>
+        <Title>Total_2016</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>Total_2016</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.9990397779885</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>4.872161977858303</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.9990397779885" miny="-33.750464222966606" maxx="-28.84048936307761" maxy="4.872161977858303"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.9990397779885" maxx="4.87216197801821" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:Total_2016</Name>
+          <Title>BNDES:Total_2016</Title>
+          <LegendURL width="178" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Total_2016"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>Total_2017</Name>
+        <Title>Total_2017</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Total_2017</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6455192979168</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>4.872161977858303</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6455192979168" miny="-33.750464222966606" maxx="-28.84048936307761" maxy="4.872161977858303"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.6455192979168" maxx="4.87216197801821" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:Total_2018</Name>
+          <Title>BNDES:Total_2018</Title>
+          <LegendURL width="201" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Total_2017"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>Total_2018</Name>
+        <Title>APROVAÇÕES SISTEMA BNDES POR MUNICÍPIO EM 2018</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>total2018</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.4068069458008</westBoundLongitude>
+          <eastBoundLongitude>-28.8404884338379</eastBoundLongitude>
+          <southBoundLatitude>-33.7504653930664</southBoundLatitude>
+          <northBoundLatitude>4.87216234207153</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.4068069458008" miny="-33.7504653930664" maxx="-28.8404884338379" maxy="4.87216234207153"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504653930664" miny="-67.4068069458008" maxx="4.87216234207153" maxy="-28.8404884338379"/>
+        <Style>
+          <Name>BNDES:Total_2018</Name>
+          <Title>BNDES:Total_2018</Title>
+          <LegendURL width="201" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=Total_2018"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>test</Name>
+        <Title>test</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Total_2017</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.2239608764648</westBoundLongitude>
+          <eastBoundLongitude>-28.840488433837905</eastBoundLongitude>
+          <southBoundLatitude>-33.75046539219441</southBoundLatitude>
+          <northBoundLatitude>4.872162341911623</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.2239608764648" miny="-33.75046539219441" maxx="-28.840488433837905" maxy="4.872162341911623"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504653930664" miny="-67.2239608764648" maxx="4.87216234207153" maxy="-28.8404884338379"/>
+        <Style>
+          <Name>BNDES:Total_2018</Name>
+          <Title>BNDES:Total_2018</Title>
+          <LegendURL width="201" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=test"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0" opaque="0">
+        <Name>test2</Name>
+        <Title>test</Title>
+        <Abstract/>
+        <KeywordList/>
+        <CRS>EPSG:4674</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.6455192979168</westBoundLongitude>
+          <eastBoundLongitude>-28.84048936307761</eastBoundLongitude>
+          <southBoundLatitude>-33.750464222966606</southBoundLatitude>
+          <northBoundLatitude>4.872161977858303</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.6455192979168" miny="-33.750464222966606" maxx="-28.84048936307761" maxy="4.872161977858303"/>
+        <BoundingBox CRS="EPSG:4674" minx="-33.7504642238386" miny="-73.6455192979168" maxx="4.87216197801821" maxy="-28.8404893630776"/>
+        <Style>
+          <Name>BNDES:Total_2018</Name>
+          <Title>BNDES:Total_2018</Title>
+          <LegendURL width="201" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicos.inde.gov.br/geoserver/BNDES/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=test2"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>
