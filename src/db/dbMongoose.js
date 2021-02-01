@@ -1,3 +1,5 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.CONEXAODB,{ useNewUrlParser: true, useUnifiedTopology: true });
+res = mongoose.connect(process.env.CONEXAODB,{ useNewUrlParser: true, useUnifiedTopology: true });
+console.log("MOOGOSEEEEEEEEEEEEEEEEEEEEEEEE")
+console.log(res)
