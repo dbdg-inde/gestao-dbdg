@@ -73,7 +73,6 @@ router.get('/usuarios', async (req, res) => {
 })
 router.post('/usuarios/login', async (req, res) => {
     try {
-        console.log("ENTREU")
         const usuario = await Usuario.findByCredentials(req.body.email, req.body.password)
         if(!usuario)
             return res.status(404).send("Usuário não encontrado")
