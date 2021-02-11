@@ -20,6 +20,7 @@ class WMSCapabilities {
         this.xmlString = null
         this.xmlObject = null
     }
+   
     async filterObject (obj, filterKey, filterValue) { 
         return Object.keys(obj).reduce((acc, val) => 
                 (obj[val][filterKey] !== filterValue ? acc : {...acc,[val]: obj[val]}                                        
@@ -299,6 +300,20 @@ class WMSCapabilities {
     async layerObjectsByCRS(a_crs_str) {
         return await this.layerObjectsBy('CRS', a_crs_str)
     }
+    async lenLayersNameNotEqualTitleObjects() {
+        const layers = await this.layerObjects()
+        const filteredLayers = await layers.filter((layerObj) => {
+           return layerObj['Name'] != layerObj['Title']
+        })
+        return filteredLayers.length
+    } 
+    async layersNameNotEqualTitleObjects() {
+        const layers = await this.layerObjects()
+        const filteredLayers = await layers.filter((layerObj) => {
+           return layerObj['Name'] != layerObj['Title']
+        })
+        return filteredLayers.map( layrObject => layrObject['Name'] )
+    }
     //A server should use one or more <MetadataURL>
     async metadataURLObjects() {
         const layers = await this.layerObjects()
@@ -314,10 +329,23 @@ class WMSCapabilities {
         })
         return layerObjects
     }
+    async layerNamesWithoutMetadata() {
+        const layerObjects = await this.layerObjectsWithoutMetadata()
+        const arr_metadados = await layerObjects.map((layerObj) => { return layerObj['Name']})
+        return arr_metadados.join(',')
+    }
+    async layerTitlesWithoutMetadata() {
+        const layerObjects = await this.layerObjectsWithoutMetadata()
+        const arr_metadados = await layerObjects.map((layerObj) => { return layerObj['Title']})
+        return arr_metadados.join(',')
+    }
+    
+
     async lenLayerObjectsWithoutMetadata(){
         const layerObjects = await this.layerObjectsWithoutMetadata()
         return await layerObjects.length
     }
+
     async lenMetadataURL() {
         const metadados = await this.metadataURLObjects()
         const arr = await metadados.filter(metadata => {return metadata} )

@@ -11,6 +11,7 @@ const fetch = require('node-fetch')
 const xml2js = require('xml2js')
 const fs = require('fs') 
 const util = require('util')
+const { join } = require('path')
 const readFile = util.promisify(fs.readFile)
 class WMSCapabilities {
     constructor(anUrl) {
@@ -19,6 +20,9 @@ class WMSCapabilities {
         this.url = anUrl
         this.xmlString = null
         this.xmlObject = null
+    }
+    ola() {
+        return "OLÁ"
     }
     async filterObject (obj, filterKey, filterValue) { 
         return Object.keys(obj).reduce((acc, val) => 
@@ -280,10 +284,12 @@ class WMSCapabilities {
         })
         return layerObjects
     }
+
     async lenLayerObjectsWithoutMetadata(){
         const layerObjects = await this.layerObjectsWithoutMetadata()
         return await layerObjects.length
     }
+    
     async lenMetadataURL() {
         const metadados = await this.metadataURLObjects()
         const arr = await metadados.filter(metadata => {return metadata} )
