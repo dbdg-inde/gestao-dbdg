@@ -29,6 +29,7 @@ class WMSCapabilities {
     async convertToXmlObject(xmlString) {
         const parser = new xml2js.Parser(/* options */);
         this.xmlObject = await parser.parseStringPromise(xmlString)
+               
         if (!this.xmlObject['WMS_Capabilities']) {
             if (this.xmlObject['ServiceExceptionReport']){
                 console.log(this.xmlObject['ServiceExceptionReport'])
@@ -47,6 +48,7 @@ class WMSCapabilities {
             this.res = await fetch(this.url)
             const status = await this.res.status
             const headers = await this.res.headers.raw()
+            
             if (this.res.status===404){
                 this.xmlObject = null
                 throw new Error(`URL não encontrado: ${this.url}.Status code:${this.res.status}`)
@@ -55,10 +57,23 @@ class WMSCapabilities {
                 this.xmlObject = null
                 throw new Error(`Houve algum problema na requisição ${this.url}.Status code:${this.res.status}`)
             }
+            
             const contentType = await headers['content-type']
-            if (!contentType[0].startsWith('text/xml'))    
+            
+            if (!contentType[0].startsWith('text/xml'))  {
+                console.log(contentType)
                 throw new Error("O content type deveria ser text/xml, mas veio text/html. Verifique se há algo errado no URL: " + this.url)    
-            this.xmlString = await this.res.text() 
+            }  
+                
+            try {
+                
+                this.xmlString = await this.res.text() 
+               
+            } catch (error) {
+               
+                 throw new Error(error.message)   
+            }
+            
             return await this.convertToXmlObject(this.xmlString)
         } catch (error) {
             console.log(error)

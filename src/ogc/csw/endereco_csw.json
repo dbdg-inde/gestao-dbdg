@@ -1,0 +1,21 @@
+{
+    "ANA": "https://metadados.snirh.gov.br/geonetwork",
+    "ANATEL": "https://sistemas.anatel.gov.br/geonetwork",
+    "CENSIPAM": "http://panorama.sipam.gov.br/geonetwork/srv/eng/csw",
+    "CPRM": "http://www.metadados.cprm.gov.br/geonetwork",
+    "EB": "https://bdgex.eb.mil.br/csw",
+    "EMBRAPA": "http://inde.geoinfo.cnpm.embrapa.br/geonetwork_inde",
+    "IBAMA": "https://siscom.ibama.gov.br/geonetwork",
+    "IBGE": "https://metadadosgeo.ibge.gov.br/geonetwork_ibge",
+    "IDEBA": "https://metadados.ide.ba.gov.br/geonetwork",
+    "IDEES": "https://ide.geobases.es.gov.br/catalogue/csw",
+    "IDESP": "http://www.metadados.idesp.sp.gov.br/catalogo/",
+    "IEDERS-CSW": "https://iede.rs.gov.br/geoportal/csw",
+    "INPE": "http://terrabrasilis.dpi.inpe.br/geonetwork/",
+    "MAPAS.MDA": "http://mapas.mda.gov.br/geonetwork",
+    "PRODEMGE": "https://www.geoservicos.prodemge.gov.br/geonetwork/",
+    "PrefeituraBH": "http://geonetwork.pbh.gov.br/geonetwork/",
+    "SEFIN.Fortaleza": "https://geonetwork.sefin.fortaleza.ce.gov.br/geonetwork/",
+    "SEPLAG.AL": "http://inde.dados.al.gov.br:8080/geonetwork"
+
+}

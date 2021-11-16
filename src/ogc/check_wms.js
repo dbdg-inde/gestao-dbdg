@@ -7,8 +7,6 @@ const req = async () => {
   let response = null;
   try {
     response = await fetch("https://inde.gov.br/api/catalogo/get");
-  
-  
     let total = 0;
     const catalogos_wms_json = await response.json();
     for (let catalogo_json in catalogos_wms_json) {
@@ -20,8 +18,9 @@ const req = async () => {
         else
           url = obj.url + "/?service=WMS&request=GetCapabilities";
         console.log(url);
-        const reqWMS = new WMSCapabilities(url);
+        
         try {
+          const reqWMS = new WMSCapabilities(url);
           const res = await reqWMS.lenLayerObjects();
           total += res;
           console.log(`${obj.descricao} camadas : `, res);
