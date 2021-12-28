@@ -8,9 +8,12 @@ const req = async () => {
   try {
     response = await fetch("https://inde.gov.br/api/catalogo/get");
     let total = 0;
+    let total_catalogo_geosservico = 0;
+    let qtd_instituicao = 0;
     const catalogos_wms_json = await response.json();
     for (let catalogo_json in catalogos_wms_json) {
       if (catalogos_wms_json.hasOwnProperty(catalogo_json)) {
+        total_catalogo_geosservico++;
         const obj = catalogos_wms_json[catalogo_json];
         let url = null;
         if (obj.url[obj.url.length - 1] === '/' )
@@ -18,7 +21,7 @@ const req = async () => {
         else
           url = obj.url + "/?service=WMS&request=GetCapabilities";
         console.log(url);
-        
+        qtd_instituicao++;  
         try {
           const reqWMS = new WMSCapabilities(url);
           const res = await reqWMS.lenLayerObjects();
@@ -31,6 +34,8 @@ const req = async () => {
       }
     }
     console.log("Total de geosserviços: ", total);
+    console.log("Total de instituições com catálogo: ", qtd_instituicao)
+    console.log("Total de catálogos de geosserviços: ", total_catalogo_geosservico)
   } catch (error) {
     console.log(error.message);
   }

@@ -174,9 +174,17 @@ class Iso19115Metadata2003 {
             return null
         return await gcoDates[0]['gco:DateTime'][0]
     }
-    async title() {
+    async identificationInfo() {
         let recordM = await this.recordMetadata()
         let gmdIdentificationInfo = await recordM['gmd:identificationInfo']
+        if (!gmdIdentificationInfo)
+            return null
+        return gmdIdentificationInfo
+
+    }
+    async title() {
+        
+        let gmdIdentificationInfo = await this.identificationInfo()
         if (!gmdIdentificationInfo)
             return null
         let gmdMD_DataIdentification = await gmdIdentificationInfo[0]['gmd:MD_DataIdentification']
